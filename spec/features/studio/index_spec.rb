@@ -13,14 +13,14 @@ RSpec.describe "the studio index page" do
 
 
     visit '/studios'
-
+# save_and_open_page
      within(".studio-#{sony.id}") do
-      expect(page).to have_content(apollo.name)
-      expect(page).to have_content(van.name)
+      expect(page).to have_content(apollo.title)
+      expect(page).to have_content(van.title)
     end
      within(".studio-#{mgm.id}") do
-      expect(page).to have_content(grumpy.name)
-      expect(page).to have_content(water.name)
+      expect(page).to have_content(grumpy.title)
+      expect(page).to have_content(water.title)
     end
   end
 end
