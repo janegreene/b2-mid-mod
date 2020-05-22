@@ -14,4 +14,4 @@ RSpec.describe Movie do
   describe "methods" do
   end
 end
-# rails g migration CreateStudios title:string creation_year:integer genre:string
+# rails g migration CreateMovies title:string creation_year:integer genre:string
