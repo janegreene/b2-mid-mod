@@ -7,10 +7,10 @@ RSpec.describe Actor do
   # end
 
   describe "relationships" do
-    it {should have_many :movies}
-    it {should have_many :studios}
+    it {should have_many(:movies).through(:actor_movies)}
+    # it {should have_many :studios}
   end
   describe "methods" do
   end
 end
-# rails g migration CreateActors name:string age:integer 
+# rails g migration CreateActors name:string age:integer

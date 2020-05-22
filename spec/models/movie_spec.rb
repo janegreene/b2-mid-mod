@@ -8,10 +8,12 @@ RSpec.describe Movie do
   # end
 
   describe "relationships" do
-    it {should have_many :actors}
+    it {should have_many(:actors).through(:actor_movies)}
     it {should belong_to :studio}
   end
   describe "methods" do
   end
 end
 # rails g migration CreateMovies title:string creation_year:integer genre:string
+# add_foreign_key :movies, :studio
+# rails g migration AddStudioToMovies studio:references
