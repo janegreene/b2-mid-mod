@@ -28,8 +28,11 @@ RSpec.describe Actor do
       ActorMovie.create(actor_id: kevin.id, movie_id: apollo.id)
 
 
-      expect(Actor.age_order.first).to eq(kevin)
-      expect(Actor.age_order.last).to eq(tom)
+      # expect(Actor.age_order.first).to eq(kevin)
+      # expect(Actor.age_order.last).to eq(tom)
+      expect(apollo.actors.age_order.first).to eq(kevin)
+      expect(apollo.actors.age_order.last).to eq(tom)
+      
   end
   end
 end
